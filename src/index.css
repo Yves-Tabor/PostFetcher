@@ -2,19 +2,17 @@ body{
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
-    padding: 0;
-}
-
-body div{
-  margin: 50px;
+    padding-left: 6%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 45px 10%;
 }
 header {
   height: 100px;
@@ -31,25 +29,26 @@ header h4{
 }
 
 #fetch-box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid gray;
   border-radius: 10px;
-  max-width: 600px;
-  min-height: 200px;
+  padding: 14px;
+  height: 200px;
+  max-width: 85%;
 }
 
 #fetch-box-input {
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  width: 100%;
 }
-
 #fetch-box-input input {
   flex: 1;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 5px;
-  font-size: 1rem;
 }
 
 #fetch-box-input button {
@@ -59,34 +58,37 @@ header h4{
   background-color: black;
   color: white;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-#fetch-box-input button:hover {
-  background-color: #333;
+#post-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+  max-width: 85%;
+  font-size: large;
 }
 
-/* Responsive design */
-@media (min-width: 768px) {
-  #fetch-box-input {
-    flex-direction: row;
-  }
-  
-  #fetch-box-input button {
-    white-space: nowrap;
-  }
+#post-header button{
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+#post-header button:hover{
+  background-color: black;
+  color: white;
 }
 
-@media (max-width: 480px) {
-  main {
-    padding: 0 10px;
-  }
-  
-  #fetch-box {
-    padding: 15px;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
+#paginate{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
+
+

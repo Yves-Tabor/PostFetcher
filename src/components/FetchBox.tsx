@@ -5,12 +5,13 @@
 // - It will have a submit button called `Fetch`
 // - There will be a `retry` button to manually refetch again if the request fail
 // - If the user clicks the button, it will fetch the posts and display them
-// You have to fetch using a custom hook
+// Implementation: You have to fetch using a custom hook
 // The hook will return
 // The posts to display
 // refetch function
 // loading state
 // error state
+// Additional: Add pagination buttons and display 10 posts per page
 
 import React from "react";
 
@@ -62,10 +63,17 @@ export function FetchBox() {
             </div>
             <form id='fetch-box-input' onSubmit={formHandler}>
                 <input type="text" placeholder="https://..." value={url} onChange={(e)=>(setUrl(e.target.value))}/>
-                <button type="submit">Fetch</button>                <button type="button" ref={refetchButtonRef} onClick={refetchHandler} style={{display:'none'}}>Refetch</button>
+                <button type="submit">Fetch</button>                <button type="button" ref={refetchButtonRef} onClick={refetchHandler} style={{display:'none'}}>Retry</button>
             </form>
         </div>
-
+        <div id="post-header">
+            <h3>Posts ({posts.length})</h3>
+            <div id="paginate">
+                <button id='previous'>Previous</button>
+                <p>Page {} of 10</p>
+                <button id='next'>Next</button>
+            </div>
+        </div>
         
         </div>
     )
