@@ -1,9 +1,20 @@
 body{
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
 }
+
 body div{
   margin: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 header {
   height: 100px;
@@ -17,4 +28,65 @@ header h4{
   font-size: 1rem;
   font-weight: 300;
   color: gray;
+}
+
+#fetch-box {
+  border: 1px solid gray;
+  border-radius: 10px;
+  max-width: 600px;
+  min-height: 200px;
+}
+
+#fetch-box-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+#fetch-box-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#fetch-box-input button {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#fetch-box-input button:hover {
+  background-color: #333;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  #fetch-box-input {
+    flex-direction: row;
+  }
+  
+  #fetch-box-input button {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 10px;
+  }
+  
+  #fetch-box {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
 }

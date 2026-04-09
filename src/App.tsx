@@ -1,10 +1,12 @@
 import Header from './components/Header'
+import { FetchBox } from './components/FetchBox'
 
 function App() {
   return (
-    <div>
+    <main>
       <Header />
-    </div>
+      <FetchBox />
+    </main>
   )
 }
 
